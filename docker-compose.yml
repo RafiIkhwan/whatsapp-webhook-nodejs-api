@@ -20,13 +20,13 @@ services:
       retries: 3
 
   waha:
-    image: devlikeapro/waha-plus:latest
+    image: devlikeapro/waha:chrome
     container_name: whatsapp_waha
     ports:
       - "3000:3000"
     environment:
-      - WAHA_WEBHOOK_URL=http://app:4000/api/webhook
-      - WAHA_WEBHOOK_EVENTS=message,message.status
+      - WAHA_WEBHOOK_URL=https://47pq1gg4-4000.asse.devtunnels.ms/api/webhook
+      - WAHA_WEBHOOK_EVENTS=message
     volumes:
       - waha_sessions:/app/.wwebjs_auth
     depends_on:

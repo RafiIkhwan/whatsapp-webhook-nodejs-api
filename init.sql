@@ -35,7 +35,6 @@ CREATE TABLE IF NOT EXISTS messages (
     chat_id VARCHAR(255) NOT NULL,
     from_number VARCHAR(20) NOT NULL,
     to_number VARCHAR(20),
-    message_type VARCHAR(50) NOT NULL,
     message_body TEXT,
     timestamp TIMESTAMP NOT NULL,
     is_from_me BOOLEAN DEFAULT FALSE,
